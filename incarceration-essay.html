@@ -1,0 +1,47 @@
+<section class="research-header">
+    <h1>Post-Civil War Incarceration</h1>
+    <p class="subtitle">Exploring the Ethics of Reconstruction-Era Justice Systems</p>
+
+    <div class="flash-container">
+        <div class="flash-slide">
+            <img src="justice-1.jpg" alt="Historical Record 1">
+            <img src="justice-2.jpg" alt="Historical Record 2">
+            <img src="justice-3.jpg" alt="Historical Record 3">
+            <img src="justice-4.jpg" alt="Historical Record 4">
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Styling the Data Justice Look */
+    .flash-container {
+        width: 100%;
+        max-width: 900px;
+        height: 450px;
+        overflow: hidden;
+        margin: 30px auto;
+        border: 2px solid #333; /* Adds a professional frame */
+    }
+    .flash-slide {
+        display: flex;
+        width: 400%; 
+        animation: flash-loop 12s infinite;
+    }
+    .flash-slide img {
+        width: 25%;
+        height: 450px;
+        object-fit: cover;
+    }
+
+    @keyframes flash-loop {
+        0% { transform: translateX(0%); }
+        20% { transform: translateX(0%); }
+        25% { transform: translateX(-25%); }
+        45% { transform: translateX(-25%); }
+        50% { transform: translateX(-50%); }
+        70% { transform: translateX(-50%); }
+        75% { transform: translateX(-75%); }
+        95% { transform: translateX(-75%); }
+        100% { transform: translateX(0%); }
+    }
+</style>
