@@ -3,170 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post-Civil War Incarceration | Data Justice Portfolio</title>
+    <title>Policy Analysis | African American Incarceration</title>
     <style>
         :root {
             --berkeley-blue: #003262;
             --berkeley-gold: #FDB515;
-            --text-dark: #222;
-            --bg-light: #f4f4f4;
+            --bg-gray: #f4f7f9;
         }
 
         body {
             margin: 0;
-            font-family: 'Crimson Text', serif; /* Classic academic font */
-            background-color: var(--bg-light);
-            color: var(--text-dark);
+            padding: 0;
+            background-color: var(--bg-gray);
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: #333;
             line-height: 1.8;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            max-width: 900px;
+            margin: 40px auto;
             background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            padding: 60px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 12px;
         }
 
         header {
-            text-align: center;
-            border-bottom: 2px solid var(--berkeley-blue);
-            margin-bottom: 30px;
+            border-bottom: 4px solid var(--berkeley-gold);
+            margin-bottom: 50px;
             padding-bottom: 20px;
         }
 
-        h1 {
-            font-family: sans-serif;
-            font-size: 2.5rem;
-            margin: 0;
-            color: var(--berkeley-blue);
-        }
+        h1 { color: var(--berkeley-blue); font-size: 2.6rem; margin: 0; }
+        h2 { color: var(--berkeley-blue); font-size: 1.8rem; margin-top: 40px; border-left: 5px solid var(--berkeley-gold); padding-left: 15px; }
 
-        .subtitle {
-            font-style: italic;
-            color: #555;
-            font-size: 1.1rem;
-        }
+        .back-link { display: inline-block; text-decoration: none; color: var(--berkeley-blue); font-weight: 600; margin-bottom: 20px; }
 
-        /* --- THE 4-IMAGE FLASH CAROUSEL --- */
-        .flash-container {
+        /* --- THE RESEARCH SECTIONS --- */
+        .research-section { margin-bottom: 60px; }
+        
+        .research-img {
             width: 100%;
             height: 400px;
-            overflow: hidden;
-            margin: 30px 0;
-            border-radius: 4px;
-            position: relative;
-        }
-
-        .flash-slide {
-            display: flex;
-            width: 400%; 
-            animation: flash-loop 16s infinite;
-        }
-
-        .flash-slide img {
-            width: 25%;
-            height: 400px;
             object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        @keyframes flash-loop {
-            0% { transform: translateX(0%); }
-            20% { transform: translateX(0%); }
-            25% { transform: translateX(-25%); }
-            45% { transform: translateX(-25%); }
-            50% { transform: translateX(-50%); }
-            70% { transform: translateX(-50%); }
-            75% { transform: translateX(-75%); }
-            95% { transform: translateX(-75%); }
-            100% { transform: translateX(0%); }
-        }
+        .essay-text { font-size: 1.15rem; color: #444; text-align: justify; }
 
-        /* --- ESSAY CONTENT --- */
-        .essay-content p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        /* --- ABOUT THE RESEARCHER (QUIANA) --- */
-        .profile-section {
-            margin-top: 60px;
+        /* --- DOWNLOAD BOX --- */
+        .download-box {
+            background: var(--berkeley-blue);
+            color: white;
             padding: 30px;
-            background: #f9f9f9;
-            border-left: 5px solid var(--berkeley-gold);
+            border-radius: 12px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--berkeley-gold);
+            color: var(--berkeley-blue);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover { transform: scale(1.05); background: white; }
+
+        /* --- FOOTER PROFILE --- */
+        .profile-footer {
+            margin-top: 80px;
+            padding: 40px;
+            background: #eef2f6;
+            border-radius: 15px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
         }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--berkeley-blue);
-        }
+        .profile-footer img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid white; }
+        .profile-info h3 { margin: 0; color: var(--berkeley-blue); font-size: 1.5rem; }
 
-        .profile-bio h3 {
-            margin: 0 0 10px 0;
-            font-family: sans-serif;
-            color: var(--berkeley-blue);
-        }
-
-        .profile-bio p {
-            margin: 0;
-            font-size: 1rem;
-            line-height: 1.4;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-family: sans-serif;
-            font-size: 0.8rem;
-            color: #999;
+        @media (max-width: 768px) {
+            .profile-footer { flex-direction: column; text-align: center; }
+            .container { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <a href="https://quianacan.dev" class="back-link">← Return to Portfolio</a>
+        
         <header>
-            <h1>Post-Civil War Incarceration</h1>
-            <p class="subtitle">Data Justice & The Legacy of the Convict Leasing System</p>
+            <h1>African American Incarceration Post-Civil War</h1>
+            <p>A State of the Field Policy Analysis | By Quiana Anderson</p>
         </header>
 
-        <div class="flash-container">
-            <div class="flash-slide">
-                <img src="justice-1.jpg" alt="Historical Record">
-                <img src="justice-2.webp" alt="Convict Labor Camp">
-                <img src="justice-3.jpg" alt="Post-Civil War Map">
-                <img src="justice-4.jpg" alt="Archival Document">
-            </div>
+        <div class="research-section">
+            <h2>1. The Reinvention of the Caste System</h2>
+            <img src="justice-1.jpg" class="research-img" alt="Historical Records">
+            <p class="essay-text">
+                Following the Civil War, the American carceral state underwent a radical transformation that effectively reinvented the racial caste system[cite: 3]. While the 13th Amendment abolished slavery, it contained a critical loophole—"except as punishment for a crime"—which allowed for the continuation of legalized discrimination against African Americans[cite: 4]. Historians such as Michelle Alexander argue that the modern era of mass incarceration is not a departure from Jim Crow, but a manifestation of the same discriminatory architecture adapted for the 21st century[cite: 4, 123]. By analyzing historical records, we can see how government officials used statistics and race to justify the incarceration of individuals regardless of actual criminal activity[cite: 5].
+            </p>
         </div>
 
-        <article class="essay-content">
-            <p>
-                In the era following the American Civil War, the Southern legal landscape underwent a radical transformation. While the 13th Amendment technically abolished slavery, its "punishment for crime" loophole allowed for a new era of state-sanctioned labor exploitation known as the Convict Leasing System.
+        <div class="research-section">
+            <h2>2. Vagrancy Laws and "Blackness"</h2>
+            <img src="justice-2.webp" class="research-img" alt="Reconstruction Era Policing">
+            <p class="essay-text">
+                During Reconstruction, policies like the Vagrancy Codes were used as tools to criminalize African American freedom[cite: 53]. John K. Bardes argues that these laws redefined vagrancy to police not just physical movement, but also wage labor and human migration[cite: 54]. In cities like New Orleans, these codes created a system where thousands of men, women, and children were arrested for merely "looking suspicious"[cite: 57, 60]. These laws served the interests of white elites by ensuring a steady supply of hard labor through long sentences, effectively placing African Americans back into slave-like conditions[cite: 54, 62].
             </p>
-            <p>
-                As a Data Analyst focusing on Computational Social Science, my research examines how the "Black Codes" of the 1860s and 70s created a statistical pipeline that disproportionately targeted formerly enslaved individuals to fuel the industrialization of the New South.
-            </p>
-            </article>
+        </div>
 
-        <section class="profile-section">
-            <img src="profile.jpg" alt="Quiana - Data Analyst" class="profile-img">
-            <div class="profile-bio">
-                <h3>About Quiana</h3>
-                <p>
-                    Quiana is a Data Analyst and soon-to-be graduate of the <strong>Master of Computational Social Science</strong> program at UC Berkeley. 
-                    Her work bridges the gap between historical archival data and modern justice analytics.
-                </p>
+        <div class="research-section">
+            <h2>3. The Trials of Youth: Mary Booth</h2>
+            <img src="justice-3.jpg" class="research-img" alt="Juvenile Records">
+            <p class="essay-text">
+                The post-emancipation era also saw the devastating rise of child incarceration[cite: 81]. Research by Catherine A. Jones highlights the case of 14-year-old Mary Booth, a free-born child whose rights were severely limited by the inequitable application of Southern law[cite: 85, 87]. By 1880, nearly ninety percent of incarcerated youths in Virginia were African American children[cite: 88]. These young citizens were often denied the "presumption of innocence" granted to their white peers, with girls like Booth being characterized as "notorious" rather than innocent[cite: 89, 90]. This period solidified racial disparities that have persisted in the juvenile justice system for over a century[cite: 81].
+            </p>
+        </div>
+
+        <div class="research-section">
+            <h2>4. Activism Under Oppressive Circumstances</h2>
+            <img src="justice-4.jpg" class="research-img" alt="Black Civil War Soldiers">
+            <p class="essay-text">
+                Despite these oppressive carceral policies, African Americans demonstrated fierce resistance and political activism[cite: 8, 125]. Jonathan Lande’s research into the letters of incarcerated Black Civil War soldiers reveals an "undaunted patriotism"[cite: 17, 42]. These inmates did not view themselves as criminals, but as patriots who were willing to sacrifice for the Union cause in exchange for the recognition of their citizenship[cite: 22, 32]. Similarly, bi-racial coalitions like the Readjuster Party in Virginia provided a temporary buffer for Black children against extreme state punishment[cite: 95, 96]. These histories prove that even within prison walls, African Americans maintained a spirited demand for their place in democracy[cite: 42, 44].
+            </p>
+        </div>
+
+        <div class="download-box">
+            <h3>Read the Complete Research Paper</h3>
+            <p>For the full analysis, including detailed bibliographies and citations of secondary historical sources.</p>
+            <a href="African_American_Incarceration_Research.pdf" class="download-btn" target="_blank">Download Full PDF Paper</a>
+        </div>
+
+        <footer class="profile-footer">
+            <img src="profile.jpg" alt="Quiana Anderson">
+            <div class="profile-info">
+                <h3>Quiana Anderson</h3>
+                <p><strong>Master of Computational Social Science Candidate</strong></p>
+                <p>UC Berkeley | Specializing in Historical Policy & Carceral Systems</p>
             </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 Data Justice Portfolio | Built with Git & VS Code</p>
         </footer>
     </div>
 
